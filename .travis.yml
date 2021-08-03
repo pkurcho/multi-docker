@@ -14,7 +14,7 @@ after_success:
   - docker build -t pkurcho/multi-server ./server
   - docker build -t pkurcho/multi-worker ./worker
   #Log into the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker_login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take those images and push them to docker hub
   - docker push pkurcho/multi-client
   - docker push pkurcho/multi-nginx
