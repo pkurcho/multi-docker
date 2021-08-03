@@ -16,7 +16,7 @@ after_success:
   #Log into the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take those images and push them to docker hub
-  - docker push pkurcho/multi-client
-  - docker push pkurcho/multi-nginx
-  - docker push pkurcho/multi-server
-  - docker push pkurcho/multi-worker
+  - docker push pkurchock/pkurcho:multi-client
+  - docker push pkurchock/pkurcho:multi-nginx
+  - docker push pkurchock/pkurcho:multi-server
+  - docker push pkurchock/pkurcho:multi-worker
